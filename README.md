@@ -1,4 +1,4 @@
-![whatsapp-icon](build/whatsapp.png)
+<img src="build/whatsapp.png" width="150" height="150" />
 
 # whatsapp-electron
 A Simple WhatsApp client using Electron because WhatsApp didn't create a Linux version.
