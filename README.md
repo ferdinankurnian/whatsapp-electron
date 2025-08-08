@@ -1,15 +1,22 @@
-# whatsapp-electron
+![whatsapp-icon](build/whatsapp.png)
 
-To install dependencies:
+# whatsapp-electron
+A Simple WhatsApp client using Electron because WhatsApp didn't create a Linux version.
+
+## To install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+## To run:
 
 ```bash
-bun run index.ts
+bun start
 ```
 
-This project was created using `bun init` in bun v1.2.13. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## To build:
+
+```bash
+bun package
+```
