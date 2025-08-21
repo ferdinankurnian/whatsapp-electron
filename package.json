@@ -1,19 +1,25 @@
 {
   "name": "whatsapp-electron",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "main.js",
   "description": "A Simple WhatsApp client using Electron",
   "author": "Ferdinan Iydheko",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . WhatsApp --platform=linux --arch=x64 --icon=assets/whatsapp.png --overwrite"
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder --win --linux"
   },
   "build": {
     "appId": "com.iydheko.whatsappelectron",
     "productName": "WhatsApp",
     "linux": {
-      "target": "AppImage",
-      "icon": "build/icon.png",
+      "target": [
+        "AppImage",
+        "zip"
+      ],
+      "icon": "assets/icon.png",
       "category": "Internet",
       "desktop": {
         "entry": {
@@ -24,7 +30,7 @@
           "Keywords": "whatsapp;chat;wa;",
           "Terminal": false,
           "Categories": "Network;Chat;Internet",
-          "Icon": "whatsapp"
+          "Icon": "icon"
         }
       },
       "executableArgs": [
@@ -41,7 +47,6 @@
   "peerDependencies": {
     "typescript": "^5"
   },
-  "dependencies": {
-    "electron-packager": "^17.1.2"
-  }
+  "dependencies": {},
+  "postinstall": "electron-builder install-app-deps"
 }

@@ -1,39 +1,46 @@
-# dependencies (bun install)
-node_modules
+# Dependencies
+/node_modules
+.bun
 
-# output
-out
-dist
-*.tgz
+# Bun Lockfile
+bun.lockb
 
-# code coverage
-coverage
-*.lcov
+# Build output
+/dist
 
-# logs
+# Logs
 logs
-_.log
-report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# dotenv environment variable files
+# Old build artifacts & temp tools
+/WhatsApp-linux-x64
+*appimagetool-x86_64.AppImage*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment Variables
 .env
+.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
 
-# caches
+# Caches
 .eslintcache
 .cache
 *.tsbuildinfo
 
-# IntelliJ based IDEs
+# IDE Configs
 .idea
-
-# Finder (MacOS) folder config
-.DS_Store
-
-# build artifacts
-WhatsApp-linux-x64/
-appimagetool-x86_64.AppImage
-appimagetool-x86_64.AppImage.1
+.vscode
